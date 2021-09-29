@@ -7,25 +7,25 @@ import java.time.Instant;
 import java.util.Objects;
 
 public class ClientDTO implements Serializable {
-    private static final long serialVersionUID = 1L;
+    //private static final long serialVersionUID = 1L;
 
     private Long id;
     private String name;
     private String cpf;
     private Double income;
     private Instant birthDate;
-    private Integer childrens;
+    private Integer children;
 
-    public ClientDTO() {
+    public ClientDTO()  {
     }
 
-    public ClientDTO(Long id, String name, String cpf, Double income, Instant birthDate, Integer childrens) {
+    public ClientDTO(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.income = income;
         this.birthDate = birthDate;
-        this.childrens = childrens;
+        this.children = children;
     }
 
     public ClientDTO(Client entity) {
@@ -34,7 +34,7 @@ public class ClientDTO implements Serializable {
         this.cpf = entity.getCpf();
         this.income = entity.getIncome();
         this.birthDate = entity.getBirthDate();
-        this.childrens = entity.getChildrens();
+        this.children = entity.getChildren();
     }
 
     public Long getId() {
@@ -77,12 +77,12 @@ public class ClientDTO implements Serializable {
         this.birthDate = birthDate;
     }
 
-    public Integer getChildrens() {
-        return childrens;
+    public Integer getChildren() {
+        return children;
     }
 
-    public void setChildrens(Integer childrens) {
-        this.childrens = childrens;
+    public void setChildren(Integer children) {
+        this.children = children;
     }
 
     @Override
@@ -96,5 +96,17 @@ public class ClientDTO implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "ClientDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", income=" + income +
+                ", birthDate=" + birthDate +
+                ", childrens=" + children +
+                '}';
     }
 }

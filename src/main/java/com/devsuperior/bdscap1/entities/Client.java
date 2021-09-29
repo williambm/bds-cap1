@@ -21,18 +21,18 @@ public class Client {
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant birthDate;
 
-    private Integer childrens;
+    private Integer children;
 
     public Client() {
     }
 
-    public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer childrens) {
+    public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.income = income;
         this.birthDate = birthDate;
-        this.childrens = childrens;
+        this.children = children;
     }
 
     public Long getId() {
@@ -75,12 +75,12 @@ public class Client {
         this.birthDate = birthDate;
     }
 
-    public Integer getChildrens() {
-        return childrens;
+    public Integer getChildren() {
+        return children;
     }
 
-    public void setChildrens(Integer childrens) {
-        this.childrens = childrens;
+    public void setChildren(Integer children) {
+        this.children = children;
     }
 
     @Override
